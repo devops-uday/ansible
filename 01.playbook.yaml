@@ -1,7 +1,7 @@
 #playbook should be list of plays always it should start with -
--name: ping the code
- hosts: mongodb
+- name: ping the code
+  hosts: mongodb
   #this is the list of tasks/modules/collections
- tasks:
-  -name: pinging the server
-   ansible.builtin.ping:
+  tasks:
+   - name: pinging the server
+     ansible.builtin.ping:
