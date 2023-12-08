@@ -1,11 +1,11 @@
 - name: create user
   hosts: localhost
   tasks:
-  - name: check the rooshop username exist or not
+  - name: check the roboshop username exist or not
   #when you want to run the Linux command dirctly i.e, incase the ansible moudle is not avilable
   #when the user does not exist then ansible is treating it as error and comming out by default
   #ignore_errors: true
-  ansible_builtin_command: id roboshop
+  ansible.builtin.command: id roboshop
   register: output #output is variable name
   ignore_errors: true
 - name: print the command output
