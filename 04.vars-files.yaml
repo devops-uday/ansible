@@ -1,0 +1,8 @@
+- name: vraibales from files
+  hosts: localhost #managing the ansible server itself
+  vars_files:
+   - variables.yaml
+  tasks:
+    - name: printing variables 
+      ansible.builtin.debug:
+        msg: "name of the course is {{COURSE}}, name of the trainer is {{TRAINER}} and the duration of the course is {{DURATION}}"
